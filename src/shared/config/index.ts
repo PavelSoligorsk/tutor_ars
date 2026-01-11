@@ -16,6 +16,23 @@ export const GRADES: Grade[] = [
 ];
 
 export const LESSONS: Lesson[] = [
+  // 5-6 класс
+  {
+    id: '6-1',
+    title: 'Теория чисел',
+    slug: 'types',
+    gradeId: '5-6',
+    order: 1,
+  },
+
+  {
+    id: '6-2',
+    title: 'Обыкновенные дроби',
+    slug: 'ob-drob',
+    gradeId: '5-6',
+    order: 2,
+  },
+
   // 7 класс
   {
     id: '7-1',
