@@ -33,6 +33,14 @@ export const LESSONS: Lesson[] = [
     order: 2,
   },
 
+  {
+    id: '6-3',
+    title: 'Десятичные дроби',
+    slug: 'des-drob',
+    gradeId: '5-6',
+    order: 2,
+  },
+
   // 7 класс
   {
     id: '7-1',
@@ -73,7 +81,7 @@ export const LESSONS: Lesson[] = [
     gradeId: '8',
     order: 2,
   },
-  { id: '8-3', title: 'Функции', slug: 'funktsii', gradeId: '8', order: 3 },
+  { id: '8-3', title: 'Функции', slug: 'funktsii-raznye', gradeId: '8', order: 3 },
 
   // 9 класс
   {
