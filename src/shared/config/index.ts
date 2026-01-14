@@ -13,11 +13,11 @@ export const GRADES: Grade[] = [
   { id: '9', name: 'Алгебра 9 класс', slug: '9-klass', order: 4 },
   { id: '10', name: 'Алгебра 10 класс', slug: '10-klass', order: 5 },
   { id: '11', name: 'Алгебра 11 класс', slug: '11-klass', order: 6 },
-  { id: '12', name: 'Геометрия 7 класс', slug: '7-klass', order: 7 },
-  { id: '13', name: 'Геометрия 8 класс', slug: '8-klass', order: 8 },
-  { id: '14', name: 'Геометрия 9 класс', slug: '9-klass', order: 9 },
-  { id: '15', name: 'Геометрия 10 класс', slug: '10-klass', order: 10 },
-  { id: '16', name: 'Геометрия 11 класс', slug: '11-klass', order: 11 },
+  { id: '12', name: 'Геометрия Теория', slug: 'geometry', order: 7 },
+  { id: '13', name: 'Геометрия Практика', slug: '8-klass', order: 8 },
+  { id: '14', name: '#####', slug: '9-klass', order: 9 },
+  { id: '15', name: '#####', slug: '10-klass', order: 10 },
+  { id: '16', name: 'Не влезай, убьет', slug: '11-klass', order: 11 },
   { id: '17', name: 'ЦТ', slug: '11-klass', order: 12 },
   { id: '18', name: 'ЦЭ', slug: '11-klass', order: 13 },
   { id: '19', name: 'РЦЭ', slug: '11-klass', order: 13 },
@@ -205,6 +205,48 @@ export const LESSONS: Lesson[] = [
     slug: 'log-ner',
     gradeId: '11',
     order: 9,
+  },
+
+  // Геометрия 7
+
+  {
+    id: '12-1',
+    title: 'Осн',
+    slug: 'geom-osn',
+    gradeId: '12',
+    order: 1,
+  },
+
+  {
+    id: '12-2',
+    title: 'Треугольник. Начало',
+    slug: 'triangle',
+    gradeId: '12',
+    order: 2,
+  },
+
+  {
+    id: '12-3',
+    title: 'Вписанная/описанная окружности.',
+    slug: 'vpis-opis',
+    gradeId: '12',
+    order: 3,
+  },
+
+  {
+    id: '12-4',
+    title: 'Прямоугольный и равнобедренный треугольники',
+    slug: 'pr-ravnob',
+    gradeId: '12',
+    order: 2,
+  },
+
+  {
+    id: '12-5',
+    title: 'Теорема синусов, косинусов. Площади треугольников.',
+    slug: 'sq-ger-sin-cos',
+    gradeId: '12',
+    order: 2,
   },
 
   // РТ
