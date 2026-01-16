@@ -211,7 +211,7 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '12-1',
-    title: 'Осн',
+    title: 'Основные понятия геометрии',
     slug: 'geom-osn',
     gradeId: '12',
     order: 1,
@@ -219,7 +219,7 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '12-2',
-    title: 'Треугольник. Начало',
+    title: 'Треугольник',
     slug: 'triangle',
     gradeId: '12',
     order: 2,
@@ -227,26 +227,27 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '12-3',
-    title: 'Вписанная/описанная окружности.',
-    slug: 'vpis-opis',
+    title:
+      'Многоугольники. Правильные многоугольники. Четырехугольники: квадрат, прямоугольник, параллелограмм, ромб, трапеция',
+    slug: 'mnogo',
     gradeId: '12',
     order: 3,
   },
 
   {
     id: '12-4',
-    title: 'Прямоугольный и равнобедренный треугольники',
-    slug: 'pr-ravnob',
+    title: 'Круг и окружность',
+    slug: 'krug-okr',
     gradeId: '12',
-    order: 2,
+    order: 4,
   },
 
   {
     id: '12-5',
-    title: 'Теорема синусов, косинусов. Площади треугольников.',
+    title: '&&&&&&',
     slug: 'sq-ger-sin-cos',
     gradeId: '12',
-    order: 2,
+    order: 5,
   },
 
   // РТ
