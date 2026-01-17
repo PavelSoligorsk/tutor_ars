@@ -244,10 +244,26 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '12-5',
-    title: '&&&&&&',
-    slug: 'sq-ger-sin-cos',
+    title: 'Основы стереометрии',
+    slug: 'stereo-1',
     gradeId: '12',
     order: 5,
+  },
+
+  {
+    id: '12-6',
+    title: 'Пространственные фигуры',
+    slug: 'stereo-2',
+    gradeId: '12',
+    order: 6,
+  },
+
+  {
+    id: '12-7',
+    title: 'Фигуры вращения',
+    slug: 'stereo-3',
+    gradeId: '12',
+    order: 7,
   },
 
   // РТ
