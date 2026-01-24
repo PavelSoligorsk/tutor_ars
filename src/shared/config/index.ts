@@ -83,6 +83,7 @@ export const LESSONS: Lesson[] = [
     order: 4,
   },
   { id: '7-5', title: 'Степени', slug: 'stepeni', gradeId: '7', order: 5 },
+  { id: '7-6', title: 'Линейные функции', slug: 'lin-func', gradeId: '7', order: 6 },
 
   // 8 класс
   { id: '8-1', title: 'Квадратные корни', slug: 'kvadratnye-korni', gradeId: '8', order: 1 },
