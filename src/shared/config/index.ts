@@ -14,7 +14,7 @@ export const GRADES: Grade[] = [
   { id: '10', name: 'Алгебра 10 класс', slug: '10-klass', order: 5 },
   { id: '11', name: 'Алгебра 11 класс', slug: '11-klass', order: 6 },
   { id: '12', name: 'Геометрия Теория', slug: 'geometry', order: 7 },
-  { id: '13', name: 'Геометрия Практика', slug: '8-klass', order: 8 },
+  { id: '13', name: 'Геометрия Практика', slug: 'geometry_practice', order: 8 },
   { id: '14', name: '#####', slug: '9-klass', order: 9 },
   { id: '15', name: '#####', slug: '10-klass', order: 10 },
   { id: '16', name: 'Не влезай, убьет', slug: '11-klass', order: 11 },
@@ -266,6 +266,14 @@ export const LESSONS: Lesson[] = [
     slug: 'stereo-3',
     gradeId: '12',
     order: 7,
+  },
+
+  {
+    id: '13-1',
+    title: 'Решения треугольников (Теорема синусов, коснусов. Формула Герона)',
+    slug: 'geom_pract1',
+    gradeId: '13',
+    order: 1,
   },
 
   //РЦЭ
