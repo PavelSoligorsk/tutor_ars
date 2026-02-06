@@ -270,7 +270,7 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '13-1',
-    title: 'Решения треугольников (Теорема синусов, коснусов. Формула Герона)',
+    title: 'Основные понятия геометрии',
     slug: 'geom_pract1',
     gradeId: '13',
     order: 1,
