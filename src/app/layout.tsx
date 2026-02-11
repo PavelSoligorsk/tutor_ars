@@ -1,4 +1,3 @@
-import 'katex/dist/katex.min.css';
 import './globals.css';
 
 import { Footer, Header } from '@/widgets';

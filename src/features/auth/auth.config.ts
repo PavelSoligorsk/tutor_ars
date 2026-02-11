@@ -1,3 +1,5 @@
+import { randomBytes } from 'crypto';
+
 import { type NextAuthConfig } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { z } from 'zod';
@@ -19,6 +21,23 @@ const getValidPasswords = (): string[] => {
 const credentialsSchema = z.object({
   password: z.string().min(1, 'Пароль обязателен'),
 });
+
+const getAuthSecret = (): string | undefined => {
+  if (process.env.AUTH_SECRET) {
+    return process.env.AUTH_SECRET;
+  }
+
+  // In development automatically generate a temporary secret so the app runs
+  // without crashing. Note: this secret is not persisted between restarts.
+  if (process.env.NODE_ENV === 'development') {
+    console.warn('AUTH_SECRET не установлен. Сгенерирован временный секрет для разработки. Установите AUTH_SECRET в .env.local чтобы сохранять сессии между перезапусками.');
+    return randomBytes(32).toString('hex');
+  }
+
+  return undefined;
+};
+
+const authSecret = getAuthSecret();
 
 export const authConfig: NextAuthConfig = {
   pages: {
@@ -89,5 +108,8 @@ export const authConfig: NextAuthConfig = {
     strategy: 'jwt',
     maxAge: 30 * 24 * 60 * 60, // 30 days
   },
-  secret: process.env.AUTH_SECRET,
+  // Will be undefined in production if AUTH_SECRET is not set which will
+  // cause NextAuth to throw a clear MissingSecret error. In development we
+  // generate a temporary secret to avoid crashes when env is not configured.
+  secret: authSecret,
 };

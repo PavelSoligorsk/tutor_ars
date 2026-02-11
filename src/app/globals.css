@@ -33,15 +33,17 @@ body {
   font-family: var(--font-sans);
 }
 
-/* KaTeX overrides */
-.katex {
+/* MathML styles (native browser rendering, no KaTeX fonts needed) */
+math {
+  font-family: 'Cambria Math', 'STIX Two Math', 'Latin Modern Math', math;
   font-size: 1.1em;
 }
 
-.katex-display {
+math[display='block'] {
+  display: block;
+  text-align: center;
   margin: 1rem 0;
   overflow-x: auto;
-  overflow-y: hidden;
 }
 
 /* MDX content styles */

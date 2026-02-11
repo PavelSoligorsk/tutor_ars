@@ -67,11 +67,6 @@ export default tseslint.config(
           mode: 'folder',
         },
         {
-          type: 'pages',
-          pattern: 'src/pages/**',
-          mode: 'folder',
-        },
-        {
           type: 'widgets',
           pattern: 'src/widgets/**',
           mode: 'folder',
@@ -79,11 +74,6 @@ export default tseslint.config(
         {
           type: 'features',
           pattern: 'src/features/**',
-          mode: 'folder',
-        },
-        {
-          type: 'entities',
-          pattern: 'src/entities/**',
           mode: 'folder',
         },
         {
@@ -194,22 +184,12 @@ export default tseslint.config(
               position: 'before',
             },
             {
-              pattern: '@/pages/**',
-              group: 'internal',
-              position: 'before',
-            },
-            {
               pattern: '@/widgets/**',
               group: 'internal',
               position: 'before',
             },
             {
               pattern: '@/features/**',
-              group: 'internal',
-              position: 'before',
-            },
-            {
-              pattern: '@/entities/**',
               group: 'internal',
               position: 'before',
             },
@@ -242,26 +222,16 @@ export default tseslint.config(
             // app can import from any layer
             {
               from: 'app',
-              allow: ['pages', 'widgets', 'features', 'entities', 'shared'],
+              allow: ['widgets', 'features', 'shared'],
             },
-            // pages can import widgets, features, entities, shared
-            {
-              from: 'pages',
-              allow: ['widgets', 'features', 'entities', 'shared'],
-            },
-            // widgets can import features, entities, shared
+            // widgets can import features, shared
             {
               from: 'widgets',
-              allow: ['features', 'entities', 'shared'],
+              allow: ['features', 'shared'],
             },
-            // features can import entities, shared
+            // features can import shared
             {
               from: 'features',
-              allow: ['entities', 'shared'],
-            },
-            // entities can import shared only
-            {
-              from: 'entities',
               allow: ['shared'],
             },
             // shared can import only from shared

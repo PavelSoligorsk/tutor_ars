@@ -1,6 +1,4 @@
-'use client';
-
-import { type ReactNode, useEffect, useRef } from 'react';
+import { type ReactNode } from 'react';
 
 import katex from 'katex';
 
@@ -33,28 +31,32 @@ function extractTextFromChildren(children: ReactNode): string {
 }
 
 export function MathFormula({ children, display = false, className }: MathFormulaProps) {
-  const containerRef = useRef<HTMLSpanElement>(null);
   const formula = extractTextFromChildren(children).trim();
 
-  useEffect(() => {
-    if (containerRef.current && formula) {
-      try {
-        katex.render(formula, containerRef.current, {
-          displayMode: display,
-          throwOnError: false,
-          strict: false,
-        });
-      } catch (error) {
-        console.error('KaTeX rendering error:', error);
-        containerRef.current.textContent = formula;
-      }
-    }
-  }, [formula, display]);
+  if (!formula) {
+    return null;
+  }
 
-  return (
-    <span
-      ref={containerRef}
-      className={cn(display ? 'my-4 block text-center text-lg' : 'inline', className)}
-    />
-  );
+  try {
+    const html = katex.renderToString(formula, {
+      displayMode: display,
+      throwOnError: false,
+      strict: false,
+      output: 'mathml',
+    });
+
+    return (
+      <span
+        className={cn(display ? 'my-4 block text-center text-lg' : 'inline', className)}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    );
+  } catch (error) {
+    console.error('KaTeX rendering error:', error);
+    return (
+      <span className={cn(display ? 'my-4 block text-center text-lg' : 'inline', className)}>
+        {formula}
+      </span>
+    );
+  }
 }

@@ -28,7 +28,7 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
           src={src}
           alt={alt}
           fill
-          sizes="100vw"
+          sizes="(max-width: 896px) 100vw, 896px"
           className="rounded-lg shadow-md object-contain"
         />
       </div>

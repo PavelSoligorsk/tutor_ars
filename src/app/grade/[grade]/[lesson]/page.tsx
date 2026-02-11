@@ -12,6 +12,8 @@ interface LessonPageProps {
   params: Promise<{ grade: string; lesson: string }>;
 }
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   const params: { grade: string; lesson: string }[] = [];
 

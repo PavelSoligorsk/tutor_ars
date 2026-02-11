@@ -105,3 +105,19 @@ sections:
 ## Аутентификация
 
 Используются пароли из оригинального проекта. Для добавления новых паролей отредактируйте файл `src/features/auth/auth.config.ts`.
+
+**Переменные окружения**:
+
+- `AUTH_SECRET` — секрет для подписи/шифрования JWT. Обязательно указывать для production. Сгенерировать можно командой:
+
+  ```bash
+  node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+  ```
+
+- `VALID_PASSWORDS` — список паролей, разделённых запятой, например `pass1,pass2`.
+
+Скопируйте `.env.example` в `.env.local` и заполните значения перед запуском:
+
+```bash
+cp .env.example .env.local
+```

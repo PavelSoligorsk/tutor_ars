@@ -179,7 +179,7 @@ export async function MDXContent({ source }: MDXContentProps) {
   const options: MDXRemoteProps['options'] = {
     mdxOptions: {
       remarkPlugins: [remarkGfm, remarkMath, remarkImageLinks],
-      rehypePlugins: [rehypeKatex],
+      rehypePlugins: [[rehypeKatex, { output: 'mathml' }]],
     },
   };
 
