@@ -19,7 +19,7 @@
     "katex": "^0.16.28",
     "next": "16.1.6",
     "next-auth": "^5.0.0-beta.30",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "rehype-katex": "^7.0.1",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^2.12.4",
-    "@eslint/js": "^9.28.0",
+    "@eslint/js": "^9.39.2",
     "@next/eslint-plugin-next": "^16.1.6",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/katex": "^0.16.8",
