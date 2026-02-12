@@ -21,7 +21,7 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
         style={{
           aspectRatio: `${finalWidth}/${finalHeight}`,
           maxWidth: '100%',
-          maxHeight: '700px',
+          maxHeight: '20rem',
         }}
       >
         <Image
