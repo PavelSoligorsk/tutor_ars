@@ -1,6 +1,7 @@
 'use server';
 
 import { AuthError } from 'next-auth';
+import { redirect } from 'next/navigation';
 
 import { signIn, signOut } from './auth';
 
@@ -11,7 +12,7 @@ export async function authenticate(
   try {
     await signIn('credentials', {
       password: formData.get('password'),
-      redirectTo: '/',
+      redirect: false,
     });
   } catch (error) {
     if (error instanceof AuthError) {
@@ -22,9 +23,10 @@ export async function authenticate(
     }
     throw error;
   }
-  return undefined;
+  redirect('/');
 }
 
 export async function signOutAction(): Promise<void> {
-  await signOut({ redirectTo: '/login' });
+  await signOut({ redirect: false });
+  redirect('/login');
 }
