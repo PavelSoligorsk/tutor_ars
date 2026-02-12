@@ -34,7 +34,7 @@ for (const file of files) {
       options: {
         mdxOptions: {
           remarkPlugins: [remarkGfm, remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [[rehypeKatex, { output: 'mathml', strict: false }]],
         },
       },
     });

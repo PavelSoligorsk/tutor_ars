@@ -1,17 +1,9 @@
 import Link from 'next/link';
 
-import { type Grade } from '@/shared/types';
-import { Card } from '@/shared/ui';
+import { type Grade } from '@/entities/grade';
 
-function getLessonWord(count: number): string {
-  if (count === 1) {
-    return 'тема';
-  }
-  if (count < 5) {
-    return 'тем';
-  }
-  return 'тем';
-}
+import { pluralize } from '@/shared/lib';
+import { Card } from '@/shared/ui';
 
 interface GradeCardProps {
   grade: Grade;
@@ -26,8 +18,8 @@ export function GradeCard({ grade, lessonsCount, isLocked = false }: GradeCardPr
         <h3 className="text-lg font-bold text-heading">{grade.name}</h3>
         {isLocked && <span className="text-xl">🔒</span>}
       </div>
-      <p className="text-sm text-gray-600">
-        {lessonsCount} {getLessonWord(lessonsCount)}
+      <p className="text-sm text-muted">
+        {lessonsCount} {pluralize(lessonsCount, 'тема', 'темы', 'тем')}
       </p>
     </>
   );
@@ -36,7 +28,7 @@ export function GradeCard({ grade, lessonsCount, isLocked = false }: GradeCardPr
     return (
       <Card className="cursor-not-allowed opacity-60">
         {content}
-        <p className="mt-2 text-xs text-gray-500">Войдите для доступа</p>
+        <p className="mt-2 text-xs text-muted">Войдите для доступа</p>
       </Card>
     );
   }

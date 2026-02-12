@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { GRADES, LESSONS, getGradeBySlug, getLessonBySlug } from '@/shared/config';
-import { getLessonBySlug as getMDXLesson } from '@/shared/lib/mdx';
+import { GRADES, getGradeBySlug } from '@/entities/grade';
+import { LESSONS, getLessonBySlug, getMDXLesson } from '@/entities/lesson';
+
 import { MDXContent } from '@/shared/lib/mdx-components';
 import { BottomNav } from '@/shared/ui';
 
@@ -71,12 +72,12 @@ export default async function LessonPage({ params }: LessonPageProps) {
         <Link href="/" className="text-primary hover:underline">
           Главная
         </Link>
-        <span className="mx-2 text-gray-400">/</span>
+        <span className="mx-2 text-muted">/</span>
         <Link href={`/grade/${grade.slug}`} className="text-primary hover:underline">
           {grade.name}
         </Link>
-        <span className="mx-2 text-gray-400">/</span>
-        <span className="text-gray-600">{lessonMeta.title}</span>
+        <span className="mx-2 text-muted">/</span>
+        <span className="text-muted">{lessonMeta.title}</span>
       </nav>
 
       {/* Lesson Number Badge */}
@@ -87,23 +88,23 @@ export default async function LessonPage({ params }: LessonPageProps) {
       </div>
 
       {/* Header */}
-      <header className="mb-8">
+      <header className="animate-fade-in mb-8">
         <h1 className="mb-2 text-3xl font-bold text-heading md:text-4xl">{lessonMeta.title}</h1>
         {lessonMeta.description && (
-          <p className="text-lg text-gray-600">{lessonMeta.description}</p>
+          <p className="text-lg text-muted">{lessonMeta.description}</p>
         )}
       </header>
 
       {/* Content */}
-      <article className="rounded-xl bg-white p-6 shadow-md md:p-8">
+      <article className="animate-fade-in-up rounded-xl bg-white p-6 shadow-md md:p-8">
         {mdxLesson ? (
           <MDXContent source={mdxLesson.content} />
         ) : (
-          <div className="text-center text-gray-500">
+          <div className="text-center text-muted">
             <p className="mb-4 text-lg">Контент урока ещё не добавлен.</p>
             <p className="text-sm">
-              Создайте файл <code className="rounded bg-gray-100 px-2 py-1">{lessonSlug}.mdx</code>{' '}
-              в папке <code className="rounded bg-gray-100 px-2 py-1">content/{gradeSlug}/</code>
+              Создайте файл <code className="rounded bg-section px-2 py-1">{lessonSlug}.mdx</code>{' '}
+              в папке <code className="rounded bg-section px-2 py-1">content/{gradeSlug}/</code>
             </p>
           </div>
         )}

@@ -2,10 +2,26 @@ import fs from 'fs';
 import path from 'path';
 
 import matter from 'gray-matter';
+import { z } from 'zod';
 
-import { slugify } from './utils';
+import { GRADES } from '@/entities/grade';
+
+import { slugify } from '@/shared/lib';
 
 const contentDirectory = path.join(process.cwd(), 'content');
+
+const sectionSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+});
+
+const lessonMetaSchema = z.object({
+  title: z.string().optional(),
+  description: z.string().optional(),
+  grade: z.string().optional(),
+  order: z.coerce.number().optional(),
+  sections: z.array(sectionSchema).optional(),
+});
 
 function extractSectionsFromContent(content: string): { id: string; title: string }[] {
   const sections: { id: string; title: string }[] = [];
@@ -44,13 +60,7 @@ function extractSectionsFromContent(content: string): { id: string; title: strin
   return sections;
 }
 
-export interface LessonMeta {
-  title: string;
-  description?: string;
-  grade: string;
-  order: number;
-  sections?: { id: string; title: string }[];
-}
+export type LessonMeta = z.infer<typeof lessonMetaSchema>;
 
 export interface LessonContent {
   meta: LessonMeta;
@@ -71,7 +81,7 @@ export function getLessonSlugs(grade: string): string[] {
     .map((file) => file.replace('.mdx', ''));
 }
 
-export function getLessonBySlug(grade: string, slug: string): LessonContent | null {
+export function getMDXLesson(grade: string, slug: string): LessonContent | null {
   const filePath = path.join(contentDirectory, grade, `${slug}.mdx`);
 
   if (!fs.existsSync(filePath)) {
@@ -81,11 +91,13 @@ export function getLessonBySlug(grade: string, slug: string): LessonContent | nu
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const sectionsFromMeta = data.sections as LessonMeta['sections'] | undefined;
-  const extracted = extractSectionsFromContent(content);
-  const sections = sectionsFromMeta ?? (extracted.length > 0 ? extracted : undefined);
+  const parsed = lessonMetaSchema.safeParse(data);
+  const baseMeta = parsed.success ? parsed.data : {};
 
-  const meta = { ...(data as LessonMeta), ...(sections ? { sections } : {}) };
+  const extracted = extractSectionsFromContent(content);
+  const sections = baseMeta.sections ?? (extracted.length > 0 ? extracted : undefined);
+
+  const meta: LessonMeta = { ...baseMeta, ...(sections ? { sections } : {}) };
 
   return {
     meta,
@@ -94,34 +106,34 @@ export function getLessonBySlug(grade: string, slug: string): LessonContent | nu
   };
 }
 
-export function getAllLessons(): LessonContent[] {
-  const grades = ['5-6-klass', '7-klass', '8-klass', '9-klass', '10-klass', '11-klass'];
+export function getAllMDXLessons(): LessonContent[] {
+  const gradeSlugs = [...new Set(GRADES.map((g) => g.slug))];
   const lessons: LessonContent[] = [];
 
-  for (const grade of grades) {
+  for (const grade of gradeSlugs) {
     const slugs = getLessonSlugs(grade);
 
     for (const slug of slugs) {
-      const lesson = getLessonBySlug(grade, slug);
+      const lesson = getMDXLesson(grade, slug);
       if (lesson) {
         lessons.push(lesson);
       }
     }
   }
 
-  return lessons.sort((a, b) => a.meta.order - b.meta.order);
+  return lessons.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0));
 }
 
-export function getLessonsByGrade(grade: string): LessonContent[] {
+export function getMDXLessonsByGrade(grade: string): LessonContent[] {
   const slugs = getLessonSlugs(grade);
   const lessons: LessonContent[] = [];
 
   for (const slug of slugs) {
-    const lesson = getLessonBySlug(grade, slug);
+    const lesson = getMDXLesson(grade, slug);
     if (lesson) {
       lessons.push(lesson);
     }
   }
 
-  return lessons.sort((a, b) => a.meta.order - b.meta.order);
+  return lessons.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0));
 }

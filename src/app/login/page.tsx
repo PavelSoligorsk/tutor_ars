@@ -14,12 +14,12 @@ export default function LoginPage() {
         <div className="rounded-xl bg-white p-8 shadow-lg">
           <div className="mb-6 text-center">
             <h1 className="mb-2 text-2xl font-bold text-heading">🔐 Вход в систему</h1>
-            <p className="text-gray-600">Введите пароль для доступа к урокам</p>
+            <p className="text-muted">Введите пароль для доступа к урокам</p>
           </div>
 
           <LoginForm />
 
-          <div className="mt-6 text-center text-sm text-gray-500">
+          <div className="mt-6 text-center text-sm text-muted">
             <p>Пароль предоставляется репетитором</p>
           </div>
         </div>

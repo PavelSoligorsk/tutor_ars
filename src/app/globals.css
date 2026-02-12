@@ -1,16 +1,31 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #f5f9ff;
-  --foreground: #2c3e50;
-  --primary: #3498db;
-  --primary-dark: #2980b9;
-  --heading: #2c3e50;
-  --success: #2ecc71;
-  --danger: #e74c3c;
-  --warning: #ffc107;
-  --section-bg: #f8fafd;
-  --definition-bg: #e8f4fc;
+  /* Base palette */
+  --background: #f8f9fc;
+  --foreground: #374151;
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --primary-light: #eef2ff;
+  --heading: #1e293b;
+  --success: #10b981;
+  --success-light: #d1fae5;
+  --danger: #ef4444;
+  --danger-light: #fee2e2;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+  --muted: #94a3b8;
+  --border: #e2e8f0;
+
+  /* Semantic component colors */
+  --section-bg: #f8fafc;
+  --definition-bg: #eef2ff;
+  --definition-border: #a5b4fc;
+  --example-bg: #f0fdf4;
+  --example-border-success: #34d399;
+  --example-border-hard: #f87171;
+  --explanation-bg: #fffbeb;
+  --explanation-border: #fcd34d;
 }
 
 @theme inline {
@@ -18,13 +33,30 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
   --color-heading: var(--heading);
   --color-success: var(--success);
+  --color-success-light: var(--success-light);
   --color-danger: var(--danger);
+  --color-danger-light: var(--danger-light);
   --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
   --color-section: var(--section-bg);
   --color-definition: var(--definition-bg);
-  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --color-definition-border: var(--definition-border);
+  --color-example: var(--example-bg);
+  --color-example-success: var(--example-border-success);
+  --color-example-hard: var(--example-border-hard);
+  --color-explanation: var(--explanation-bg);
+  --color-explanation-border: var(--explanation-border);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,12 +75,12 @@ math[display='block'] {
   display: block;
   text-align: center;
   margin: 1rem 0;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 /* MDX content styles */
 .mdx-content {
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .mdx-content > *:first-child {
@@ -57,9 +89,97 @@ math[display='block'] {
 
 /* Math container */
 .math-container {
-  background: #f8fafd;
+  background: var(--section-bg);
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1rem 0;
-  overflow-x: auto;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+/* Staggered fade-in for lists */
+.animate-stagger > * {
+  animation: fade-in-up 0.4s ease-out both;
+}
+.animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.animate-stagger > *:nth-child(2) { animation-delay: 60ms; }
+.animate-stagger > *:nth-child(3) { animation-delay: 120ms; }
+.animate-stagger > *:nth-child(4) { animation-delay: 180ms; }
+.animate-stagger > *:nth-child(5) { animation-delay: 240ms; }
+.animate-stagger > *:nth-child(6) { animation-delay: 300ms; }
+.animate-stagger > *:nth-child(7) { animation-delay: 360ms; }
+.animate-stagger > *:nth-child(8) { animation-delay: 420ms; }
+.animate-stagger > *:nth-child(9) { animation-delay: 480ms; }
+.animate-stagger > *:nth-child(10) { animation-delay: 540ms; }
+.animate-stagger > *:nth-child(n+11) { animation-delay: 600ms; }
+
+/* Skeleton shimmer effect */
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--border) 25%,
+    var(--section-bg) 50%,
+    var(--border) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Hide scrollbar for pill navigation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Reading progress bar */
+.reading-progress {
+  transition: width 150ms ease-out;
+}
+
+/* Decorative grid pattern */
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
+  background-size: 32px 32px;
 }

@@ -10,10 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: 'bg-primary text-white hover:bg-primary-dark focus:ring-primary',
-        secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400',
+        secondary: 'bg-border text-heading hover:bg-muted/30 focus:ring-muted',
         outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-        ghost: 'text-gray-600 hover:bg-gray-100 hover:text-gray-900',
-        danger: 'bg-danger text-white hover:bg-red-600 focus:ring-danger',
+        ghost: 'text-muted hover:bg-section hover:text-heading',
+        danger: 'bg-danger text-white hover:brightness-90 focus:ring-danger',
       },
       size: {
         sm: 'px-3 py-1.5 text-sm',

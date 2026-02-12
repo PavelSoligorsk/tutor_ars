@@ -6,7 +6,7 @@ export async function Header() {
   const session = await auth();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-border bg-white shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="text-xl font-bold text-primary hover:text-primary-dark">
           📐 Математика | Репетитор
@@ -15,7 +15,7 @@ export async function Header() {
         <nav className="flex items-center gap-4">
           {session?.user ? (
             <>
-              <span className="text-sm text-gray-600">Привет, {session.user.name}</span>
+              <span className="text-sm text-muted">Привет, {session.user.name}</span>
               <SignOutButton />
             </>
           ) : (

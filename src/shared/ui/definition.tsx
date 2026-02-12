@@ -12,7 +12,7 @@ export function Definition({ title = 'Определение', children, classNa
   return (
     <div className={cn('my-5 rounded-lg bg-definition p-5', className)}>
       <div className="mb-2 text-lg font-bold text-primary-dark">{title}</div>
-      <div className="text-gray-800">{children}</div>
+      <div className="text-foreground">{children}</div>
     </div>
   );
 }

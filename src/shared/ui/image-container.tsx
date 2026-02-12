@@ -15,8 +15,8 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
   const finalHeight = height ?? 400;
 
   return (
-    <div className={cn('my-5 flex justify-center w-full px-4 md:px-0', className)}>
-      <div
+    <span className={cn('my-5 flex w-full justify-center px-4 md:px-0', className)}>
+      <span
         className="relative w-full"
         style={{
           aspectRatio: `${finalWidth}/${finalHeight}`,
@@ -31,7 +31,7 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
           sizes="(max-width: 896px) 100vw, 896px"
           className="rounded-lg shadow-md object-contain"
         />
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }

@@ -18,15 +18,15 @@ export function Example({ title, children, isHard, variant, className }: Example
   return (
     <div
       className={cn(
-        'my-5 rounded-lg border-l-4 bg-blue-50 p-5',
-        hard ? 'border-danger' : 'border-success',
+        'my-5 rounded-lg border-l-4 p-5',
+        hard ? 'border-example-hard bg-danger-light' : 'border-example-success bg-example',
         className
       )}
     >
       <div className={cn('mb-2 text-lg font-bold', hard ? 'text-danger' : 'text-success')}>
         {resolvedTitle}
       </div>
-      <div className="text-gray-800">{children}</div>
+      <div className="text-foreground">{children}</div>
     </div>
   );
 }

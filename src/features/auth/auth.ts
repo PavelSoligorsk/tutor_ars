@@ -1,8 +1,14 @@
+import { timingSafeEqual } from 'crypto';
+
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { z } from 'zod';
 
 import { authConfig } from './auth.config';
+
+if (!process.env.AUTH_SECRET) {
+  throw new Error('AUTH_SECRET environment variable is required');
+}
 
 const credentialsSchema = z.object({
   password: z.string().min(1, 'Пароль обязателен'),
@@ -24,6 +30,17 @@ function getValidPasswords(): string[] {
     .filter(Boolean);
 }
 
+function safeCompare(a: string, b: string): boolean {
+  const bufA = Buffer.from(a);
+  const bufB = Buffer.from(b);
+  if (bufA.length !== bufB.length) {
+    // Compare against self to keep constant time, then return false
+    timingSafeEqual(bufA, bufA);
+    return false;
+  }
+  return timingSafeEqual(bufA, bufB);
+}
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
@@ -41,7 +58,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const { password } = parsedCredentials.data;
         const validPasswords = getValidPasswords();
 
-        if (validPasswords.includes(password)) {
+        if (validPasswords.some((p) => safeCompare(p, password))) {
           return {
             id: 'student',
             name: 'Ученик',
