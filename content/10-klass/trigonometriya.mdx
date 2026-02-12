@@ -987,250 +987,1080 @@ $$
 
 </LessonSection>
 
-<LessonSection title="Функция y = sin α: основные свойства">
+<Section id="trig-functions" title="Тригонометрические функции">
 
-**Формулировка:** Функция синуса обладает следующими характеристиками, которые следуют из её определения на единичной окружности.
+<Def title="Функция y = sin α">
+  Функция синуса обладает следующими характеристиками, которые следуют из её определения на единичной окружности.
 
-**1. Область определения**
-$$ D(\sin) = ℝ = (−∞; +∞) $$
-Синус определён для любого угла α.
+  **1. Область определения**
 
-**2. Область значений**
-$$ E(\sin) = [−1; 1] $$
+  $$
+  D(\sin) = \mathbb{R} = (-\infty; +\infty)
+  $$
 
-![Область значений синуса](https://i.postimg.cc/XYSWKSR4/изображение.png)
+  Синус определён для любого угла α.
 
-Ордината точки на единичной окружности изменяется от −1 до 1.
+  **2. Область значений**
 
-**3. Периодичность**
-$$ \sin(α + 2π) = \sin α \quad \text{Период: } T = 2π $$
+  $$
+  E(\sin) = [-1; 1]
+  $$
 
-**4. Четность и нечетность**
-$$ \sin(−α) = -\sin α \quad \text{(нечётная функция)} $$
+  ![Область значений синуса](https://i.postimg.cc/XYSWKSR4/изображение.png)
 
-![Нечетность синуса](https://i.postimg.cc/hvQFxpMG/изображение.png)
+  Ордината точки на единичной окружности изменяется от −1 до 1.
 
-**5. Нули функции**
-$$ \sin α = 0 \quad \Leftrightarrow \quad α = πk, \quad k ∈ ℤ $$
+  **3. Периодичность**
 
-![Нули синуса](https://i.postimg.cc/L4JhNSbP/изображение.png)
+  $$
+  \sin(\alpha + 2\pi) = \sin \alpha \quad \text{Период: } T = 2\pi
+  $$
 
-**6. Монотонность**
+  **4. Чётность и нечётность**
 
-**Возрастает:** на $[-\frac{\pi}{2} + 2\pi k; \frac{\pi}{2} + 2\pi k]$
+  $$
+  \sin(-\alpha) = -\sin \alpha \quad \text{(нечётная функция)}
+  $$
 
-**Убывает:** на $[\frac{\pi}{2} + 2\pi k; \frac{3\pi}{2} + 2\pi k]$
+  ![Нечетность синуса](https://i.postimg.cc/hvQFxpMG/изображение.png)
 
-![Монотонность синуса](https://i.postimg.cc/nhpFbf0k/изображение.png)
+  **5. Нули функции**
 
-**7. График (синусоида)**
+  $$
+  \sin \alpha = 0 \quad \Leftrightarrow \quad \alpha = \pi k, \quad k \in \mathbb{Z}
+  $$
 
-![График синуса](https://i.postimg.cc/fLGs8GVg/изображение.png)
+  ![Нули синуса](https://i.postimg.cc/L4JhNSbP/изображение.png)
 
-Период T = 2π, амплитуда A = 1, проходит через (0,0).
+  **6. Монотонность**
+
+  **Возрастает:**
+
+  $$
+  \left[-\dfrac{\pi}{2} + 2\pi k;\ \dfrac{\pi}{2} + 2\pi k\right]
+  $$
+
+  **Убывает:**
+
+  $$
+  \left[\dfrac{\pi}{2} + 2\pi k;\ \dfrac{3\pi}{2} + 2\pi k\right]
+  $$
+
+  ![Монотонность синуса](https://i.postimg.cc/nhpFbf0k/изображение.png)
+
+  **7. График (синусоида)**
+
+  ![График синуса](https://i.postimg.cc/fLGs8GVg/изображение.png)
+
+  Период $T = 2\pi$, амплитуда $A = 1$, проходит через $(0,0)$.
+</Def>
+
+<Def title="Функция y = cos α">
+  Функция косинуса обладает характеристиками, аналогичными синусу, но с отличиями в чётности и сдвиге фазы.
+
+  **1. Область определения**
+
+  $$
+  D(\cos) = \mathbb{R}
+  $$
+
+  **2. Область значений**
+
+  $$
+  E(\cos) = [-1; 1]
+  $$
+
+  **3. Периодичность**
+
+  $$
+  \cos(\alpha + 2\pi) = \cos \alpha \quad T = 2\pi
+  $$
+
+  **4. Чётность**
+
+  $$
+  \cos(-\alpha) = \cos \alpha \quad \text{(чётная функция)}
+  $$
+
+  ![Четность косинуса](https://i.postimg.cc/m2N4S6BQ/изображение.png)
+
+  **5. Нули функции**
+
+  $$
+  \cos \alpha = 0 \quad \Leftrightarrow \quad \alpha = \frac{\pi}{2} + \pi k, \quad k \in \mathbb{Z}
+  $$
+
+  **6. Монотонность**
+
+  **Возрастает:**
+
+  $$
+  [\pi + 2\pi k;\ 2\pi k]
+  $$
+
+  **Убывает:**
+
+  $$
+  [2\pi k;\ \pi + 2\pi k]
+  $$
+
+  ![Монотонность косинуса](https://i.postimg.cc/RVRrt6Tm/изображение.png)
+
+  **7. График (косинусоида)**
+
+  ![График косинуса](https://i.postimg.cc/q7NWWmVF/изображение.png)
+
+  Получается из синусоиды сдвигом на $\dfrac{\pi}{2}$ влево.
+</Def>
+
+<Def title="Функция y = tg α">
+  Функция тангенса имеет особенности, связанные с её определением как отношения синуса к косинусу.
+
+  **1. Область определения**
+
+  $$
+  D(\operatorname{tg}) = \mathbb{R} \setminus \left\{\frac{\pi}{2} + \pi k \mid k \in \mathbb{Z}\right\}
+  $$
+
+  Не определена там, где $\cos \alpha = 0$.
+
+  **2. Область значений**
+
+  $$
+  E(\operatorname{tg}) = \mathbb{R}
+  $$
+
+  **3. Периодичность**
+
+  $$
+  \operatorname{tg}(\alpha + \pi) = \operatorname{tg} \alpha \quad T = \pi
+  $$
+
+  **4. Нечётность**
+
+  $$
+  \operatorname{tg}(-\alpha) = -\operatorname{tg} \alpha
+  $$
+
+  **5. Нули функции**
+
+  $$
+  \operatorname{tg} \alpha = 0 \quad \Leftrightarrow \quad \alpha = \pi k, \quad k \in \mathbb{Z}
+  $$
+
+  **6. Монотонность**
+
+  **Возрастает** на каждом интервале определения:
+
+  $$
+  \left(-\dfrac{\pi}{2} + \pi k;\ \dfrac{\pi}{2} + \pi k\right)
+  $$
+
+  **7. Асимптоты**
+
+  $$
+  \alpha = \frac{\pi}{2} + \pi k
+  $$
+
+  Вертикальные асимптоты (там, где функция не определена).
+
+  **8. График (тангенсоида)**
+
+  ![График тангенса](https://i.postimg.cc/t4BNFycm/изображение.png)
+
+  Период $T = \pi$, проходит через $(0,0)$, имеет вертикальные асимптоты.
+</Def>
+
+<Def title="Функция y = ctg α">
+  Функция котангенса, обратная к тангенсу, имеет особенности, связанные с её определением как отношения косинуса к синусу.
+
+  **1. Область определения**
+
+  $$
+  D(\operatorname{ctg}) = \mathbb{R} \setminus \left\{\pi k \mid k \in \mathbb{Z}\right\}
+  $$
+
+  Не определена там, где $\sin \alpha = 0$ (точки $\alpha = 0, \pm\pi, \pm2\pi, \ldots$).
+
+  **2. Область значений**
+
+  $$
+  E(\operatorname{ctg}) = \mathbb{R}
+  $$
+
+  **3. Периодичность**
+
+  $$
+  \operatorname{ctg}(\alpha + \pi) = \operatorname{ctg} \alpha \quad T = \pi
+  $$
+
+  **4. Нечётность**
+
+  $$
+  \operatorname{ctg}(-\alpha) = -\operatorname{ctg} \alpha
+  $$
+
+  **5. Нули функции**
+
+  $$
+  \operatorname{ctg} \alpha = 0 \quad \Leftrightarrow \quad \alpha = \frac{\pi}{2} + \pi k, \quad k \in \mathbb{Z}
+  $$
+
+  **6. Монотонность**
+
+  **Убывает** на каждом интервале определения:
+
+  $$
+  (\pi k;\ \pi + \pi k)
+  $$
+
+  **7. Асимптоты**
+
+  $$
+  \alpha = \pi k, \quad k \in \mathbb{Z}
+  $$
+
+  Вертикальные асимптоты (там, где функция не определена).
+
+  **8. График (котангенсоида)**
+
+  ![График котангенса](https://i.postimg.cc/MTQ0kBGK/изображение.png)
+
+  Период $T = \pi$, нули в точках $\dfrac{\pi}{2} + \pi k$, вертикальные асимптоты в точках $\pi k$.
+</Def>
+
+<Ex title="Пример 1. Область определения и значения">
+  Найти область определения и множество значений функции:
+
+  **а) $f(x) = 2\sin 5x$**
+
+  $$
+  D(f) = \mathbb{R}, \quad E(f) = [-2; 2] \quad (\text{так как } \sin 5x \in [-1; 1])
+  $$
+
+  **б) $f(x) = \sin 2x - 7$**
+
+  $$
+  D(f) = \mathbb{R}, \quad E(f) = [-8; -6]
+  $$
+</Ex>
+
+<Ex title="Пример 2. Использование чётности">
+  Вычислить с использованием свойств чётности:
+
+  **а) $\sin\left(-\dfrac{5\pi}{2}\right)$**
+
+  $$
+  \sin\left(-\frac{5\pi}{2}\right) = -\sin\left(\frac{5\pi}{2}\right) = -\sin\left(2\pi + \frac{\pi}{2}\right) = -\sin\left(\frac{\pi}{2}\right) = -1
+  $$
+
+  **б) $\cos(-9\pi)$**
+
+  $$
+  \cos(-9\pi) = \cos(9\pi) = \cos(8\pi + \pi) = \cos \pi = -1
+  $$
+</Ex>
+
+<Ex title="Пример 3. Область определения" isHard>
+  Найти область определения:
+
+  **а) $y = \operatorname{ctg} 3x$**
+
+  $\operatorname{ctg} 3x$ не определён при $\sin 3x = 0$
+
+  $$
+  \sin 3x = 0 \;\; \Leftrightarrow \;\; 3x = \pi k \;\; \Rightarrow \;\; x = \frac{\pi k}{3}, \quad k \in \mathbb{Z}
+  $$
+
+  $$
+  D(y) = \mathbb{R} \setminus \left\{\frac{\pi k}{3} \mid k \in \mathbb{Z}\right\}
+  $$
+
+  **б) $y = \operatorname{tg}\left(\dfrac{x}{5}\right)$**
+
+  $\operatorname{tg}\left(\dfrac{x}{5}\right)$ не определён при $\cos\left(\dfrac{x}{5}\right) = 0$
+
+  $$
+  \cos\left(\frac{x}{5}\right) = 0 \;\; \Leftrightarrow \;\; \frac{x}{5} = \frac{\pi}{2} + \pi k \;\; \Rightarrow \;\; x = \frac{5\pi}{2} + 5\pi k
+  $$
+
+  $$
+  D(y) = \mathbb{R} \setminus \left\{\frac{5\pi}{2} + 5\pi k \mid k \in \mathbb{Z}\right\}
+  $$
+</Ex>
+
+</Section>
+
+<LessonSection title="Практика: Свойства синуса и косинуса">
+
+<Ex>
+**Задание 1 (синус):** Из данных точек выберите точки, принадлежащие графику функции \( y = \sin x \).
+
+$$
+\text{а) } A\left(\frac{\pi}{4}; \frac{\sqrt{2}}{2}\right);
+\qquad
+\text{б) } B\left(\frac{\pi}{3}; -\frac{\sqrt{3}}{2}\right);
+\qquad
+\text{в) } C(-\pi; 0);
+\qquad
+\text{г) } D\left(-\frac{\pi}{2}; -1\right).
+$$
+</Ex>
+
+<Ex>
+**Задание 2 (косинус):** Из данных точек выберите точки, принадлежащие графику функции \( y = \cos x \).
+
+$$
+\text{а) } A\left(\frac{\pi}{3}; \frac{1}{2}\right);
+\qquad
+\text{б) } B\left(\frac{5\pi}{6}; -\frac{\sqrt{3}}{2}\right);
+\qquad
+\text{в) } C(2\pi; 1);
+\qquad
+\text{г) } D\left(-\frac{3\pi}{2}; 0\right).
+$$
+
+$$
+\text{д) } E\left(\frac{7\pi}{4}; \frac{\sqrt{2}}{2}\right);
+\qquad
+\text{е) } F\left(-\frac{4\pi}{3}; -\frac{1}{2}\right);
+\qquad
+\text{ж) } G(\pi; -1);
+\qquad
+\text{з) } H\left(\frac{9\pi}{2}; 0\right).
+$$
+</Ex>
+
+<Ex>
+**Задание 3 (синус):** Найдите область определения и множество значений функции.
+
+$$
+\text{а) } f(x) = 3 \sin 2x;
+\qquad
+\text{б) } g(x) = \sin \frac{x}{2} + 5;
+\qquad
+\text{в) } h(x) = -\sin 9x - 5;
+\qquad
+\text{г) } p(x) = 2 \sin 7x + 6.
+$$
+
+$$
+\text{д) } f(x) = \frac{1}{2}\sin 4x - 3;
+\qquad
+\text{е) } g(x) = 4 - \sin 3x;
+\qquad
+\text{ж) } h(x) = -2\sin \frac{x}{3} + 1;
+\qquad
+\text{з) } p(x) = \sqrt{3} \sin 5x + \sqrt{2}.
+$$
+</Ex>
+
+<Ex>
+**Задание 4 (косинус):** Найдите область определения и множество значений функции.
+
+$$
+\text{а) } f(x) = 2 \cos 3x;
+\qquad
+\text{б) } g(x) = \cos \frac{x}{4} - 2;
+\qquad
+\text{в) } h(x) = -\cos 6x + 4;
+\qquad
+\text{г) } p(x) = 5 \cos 2x - 1.
+$$
+
+$$
+\text{д) } f(x) = \frac{3}{4}\cos 8x + 2;
+\qquad
+\text{е) } g(x) = 7 - 2\cos 5x;
+\qquad
+\text{ж) } h(x) = -\frac{1}{3}\cos \frac{x}{2} - 6;
+\qquad
+\text{з) } p(x) = \sqrt{5} \cos 4x - \sqrt{3}.
+$$
+</Ex>
+
+<Ex>
+**Задание 5 (синус):** Используя свойство периодичности функции \( f(x) = \sin x \), найдите:
+
+$$
+\text{а) } \sin 765^\circ;
+\qquad
+\text{б) } \sin(-315^\circ);
+\qquad
+\text{в) } \sin(1080^\circ);
+\qquad
+\text{г) } \sin(-810^\circ).
+$$
+
+$$
+\text{д) } \sin 1470^\circ;
+\qquad
+\text{е) } \sin(-1035^\circ);
+\qquad
+\text{ж) } \sin 1530^\circ;
+\qquad
+\text{з) } \sin(-1305^\circ).
+$$
+</Ex>
+
+<Ex>
+**Задание 6 (косинус):** Используя свойство периодичности функции \( f(x) = \cos x \), найдите:
+
+$$
+\text{а) } \cos 780^\circ;
+\qquad
+\text{б) } \cos(-420^\circ);
+\qquad
+\text{в) } \cos(1260^\circ);
+\qquad
+\text{г) } \cos(-930^\circ).
+$$
+
+$$
+\text{д) } \cos 1380^\circ;
+\qquad
+\text{е) } \cos(-1140^\circ);
+\qquad
+\text{ж) } \cos 1620^\circ;
+\qquad
+\text{з) } \cos(-1500^\circ).
+$$
+</Ex>
+
+<Ex>
+**Задание 7 (синус):** Используя свойства нечётности и периодичности функции \( f(x) = \sin x \), найдите:
+
+$$
+\text{а) } f\left(-\frac{13\pi}{2}\right);
+\qquad
+\text{б) } f\left(-\frac{47\pi}{2}\right);
+\qquad
+\text{в) } f\left(-\frac{13\pi}{6}\right);
+\qquad
+\text{г) } f(-9\pi).
+$$
+
+$$
+\text{д) } f\left(-\frac{25\pi}{3}\right);
+\qquad
+\text{е) } f\left(-\frac{53\pi}{4}\right);
+\qquad
+\text{ж) } f\left(-\frac{37\pi}{6}\right);
+\qquad
+\text{з) } f(-15\pi).
+$$
+</Ex>
+
+<Ex>
+**Задание 8 (косинус):** Используя свойства чётности и периодичности функции \( f(x) = \cos x \), найдите:
+
+$$
+\text{а) } f\left(-\frac{19\pi}{3}\right);
+\qquad
+\text{б) } f\left(-\frac{41\pi}{4}\right);
+\qquad
+\text{в) } f\left(-\frac{23\pi}{6}\right);
+\qquad
+\text{г) } f(-11\pi).
+$$
+
+$$
+\text{д) } f\left(-\frac{35\pi}{3}\right);
+\qquad
+\text{е) } f\left(-\frac{61\pi}{4}\right);
+\qquad
+\text{ж) } f\left(-\frac{49\pi}{6}\right);
+\qquad
+\text{з) } f(-21\pi).
+$$
+</Ex>
+
+<Ex>
+**Задание 9 (синус):** Постройте график функции, укажите период и множество значений.
+
+$$
+\text{а) } y = \sin\left(x - \frac{\pi}{6}\right);
+\qquad
+\text{б) } y = \sin x + 2;
+\qquad
+\text{в) } y = \sin\left(x + \frac{2\pi}{3}\right);
+\qquad
+\text{г) } y = \sin x - 1.
+$$
+
+$$
+\text{д) } y = \sin\left(x + \frac{\pi}{6}\right) - 3;
+\qquad
+\text{е) } y = \sin\left(x - \frac{\pi}{3}\right) + 1;
+\qquad
+\text{ж) } y = 2\sin\left(x - \frac{\pi}{4}\right);
+\qquad
+\text{з) } y = \frac{1}{2}\sin\left(x + \frac{\pi}{3}\right) - 2.
+$$
+</Ex>
+
+<Ex>
+**Задание 10 (косинус):** Постройте график функции, укажите период и множество значений.
+
+$$
+\text{а) } y = \cos\left(x + \frac{\pi}{4}\right);
+\qquad
+\text{б) } y = \cos x - 3;
+\qquad
+\text{в) } y = \cos\left(x - \frac{5\pi}{6}\right);
+\qquad
+\text{г) } y = \cos x + 1.
+$$
+
+$$
+\text{д) } y = \cos\left(x - \frac{\pi}{3}\right) + 2;
+\qquad
+\text{е) } y = \cos\left(x + \frac{\pi}{2}\right) - 1;
+\qquad
+\text{ж) } y = 3\cos\left(x + \frac{\pi}{6}\right);
+\qquad
+\text{з) } y = \frac{1}{3}\cos\left(x - \frac{\pi}{8}\right) + 1.
+$$
+</Ex>
 
 </LessonSection>
 
-<LessonSection title="Функция y = cos α: основные свойства">
+<LessonSection title="Практика: Свойства тангенса и котангенса">
 
-**Формулировка:** Функция косинуса обладает характеристиками, аналогичными синусу, но с отличиями в четности и сдвиге фазы.
+<Ex>
+**Задание 1 (тангенс):** Определите, принадлежит ли графику функции  y = tg(x) точка.
 
-**1. Область определения**
-$$ D(\cos) = ℝ $$
+$$
+\text{а) } A(0; 0);
+\qquad
+\text{б) } B\left(\frac{\pi}{4}; -1\right);
+\qquad
+\text{в) } C\left(\frac{3\pi}{2}; 0\right).
+$$
 
-**2. Область значений**
-$$ E(\cos) = [−1; 1] $$
+$$
+\text{г) } D\left(-\frac{\pi}{4}; -1\right);
+\qquad
+\text{д) } E\left(\frac{5\pi}{6}; -\frac{\sqrt{3}}{3}\right);
+\qquad
+\text{е) } F\left(\frac{7\pi}{4}; -1\right).
+$$
 
-**3. Периодичность**
-$$ \cos(α + 2π) = \cos α \quad T = 2π $$
+$$
+\text{ж) } G\left(-\frac{2\pi}{3}; \sqrt{3}\right);
+\qquad
+\text{з) } H\left(\frac{11\pi}{6}; -\frac{\sqrt{3}}{3}\right);
+\qquad
+\text{и) } I\left(-\frac{9\pi}{4}; 1\right).
+$$
+</Ex>
 
-**4. Четность**
-$$ \cos(−α) = \cos α \quad \text{(чётная функция)} $$
+<Ex>
+**Задание 2 (котангенс):** Определите, принадлежит ли графику функции $\( y = \operatorname{ctg} x \)$ точка.
 
-![Четность косинуса](https://i.postimg.cc/m2N4S6BQ/изображение.png)
+$$
+\text{а) } A\left(\frac{\pi}{2}; 0\right);
+\qquad
+\text{б) } B\left(\frac{\pi}{4}; 1\right);
+\qquad
+\text{в) } C(\pi; 0).
+$$
 
-**5. Нули функции**
-$$ \cos α = 0 \quad \Leftrightarrow \quad α = \frac{\pi}{2} + πk, \quad k ∈ ℤ $$
+$$
+\text{г) } D\left(-\frac{\pi}{6}; -\sqrt{3}\right);
+\qquad
+\text{д) } E\left(\frac{2\pi}{3}; -\frac{\sqrt{3}}{3}\right);
+\qquad
+\text{е) } F\left(\frac{5\pi}{4}; 1\right).
+$$
 
-**6. Монотонность**
+$$
+\text{ж) } G\left(-\frac{3\pi}{4}; 1\right);
+\qquad
+\text{з) } H\left(\frac{7\pi}{6}; \sqrt{3}\right);
+\qquad
+\text{и) } I\left(-\frac{5\pi}{3}; \frac{\sqrt{3}}{3}\right).
+$$
+</Ex>
 
-**Возрастает:** на $[π + 2πk; 2πk]$
+<Ex>
+**Задание 3 (тангенс):** Найдите область определения функции.
 
-**Убывает:** на $[2πk; π + 2πk]$
+$$
+\text{а) } y = \operatorname{tg} 2x;
+\qquad
+\text{б) } y = \operatorname{tg} \frac{x}{3};
+\qquad
+\text{в) } y = \operatorname{tg} \left(x + \frac{\pi}{4}\right);
+\qquad
+\text{г) } y = \operatorname{tg} 4x - 1.
+$$
 
-![Монотонность косинуса](https://i.postimg.cc/RVRrt6Tm/изображение.png)
+$$
+\text{д) } y = \operatorname{tg} \left(2x - \frac{\pi}{6}\right);
+\qquad
+\text{е) } y = \operatorname{tg} \frac{x}{2} + 3;
+\qquad
+\text{ж) } y = \operatorname{tg} \left(3x + \frac{\pi}{3}\right);
+\qquad
+\text{з) } y = 2\operatorname{tg} \frac{x}{4}.
+$$
 
-**7. График (косинусоида)**
+$$
+\text{и) } y = \operatorname{tg} \left(\frac{x}{2} - \frac{\pi}{8}\right);
+\qquad
+\text{к) } y = \operatorname{tg} (5x) \cdot \operatorname{ctg} (5x).
+$$
+</Ex>
 
-![График косинуса](https://i.postimg.cc/q7NWWmVF/изображение.png)
+<Ex>
+**Задание 4 (котангенс):** Найдите область определения функции.
 
-Получается из синусоиды сдвигом на π/2 влево.
+$$
+\text{а) } y = \operatorname{ctg} 3x;
+\qquad
+\text{б) } y = \operatorname{ctg} \frac{x}{5};
+\qquad
+\text{в) } y = \operatorname{ctg} \left(x - \frac{\pi}{2}\right);
+\qquad
+\text{г) } y = \operatorname{ctg} 6x + 2.
+$$
 
+$$
+\text{д) } y = \operatorname{ctg} \left(2x + \frac{\pi}{8}\right);
+\qquad
+\text{е) } y = \operatorname{ctg} \frac{x}{4} - 5;
+\qquad
+\text{ж) } y = \operatorname{ctg} \left(\frac{x}{3} - \frac{\pi}{6}\right);
+\qquad
+\text{з) } y = 3\operatorname{ctg} \frac{x}{2}.
+$$
+
+$$
+\text{и) } y = \operatorname{ctg} \left(4x - \frac{\pi}{3}\right);
+\qquad
+\text{к) } y = \frac{1}{\operatorname{tg} 2x}.
+$$
+</Ex>
+
+<Ex>
+**Задание 5 (тангенс):** Используя свойство периодичности функции \( y = \operatorname{tg} x \), найдите:
+
+$$
+\text{а) } \operatorname{tg} \frac{4\pi}{3};
+\qquad
+\text{б) } \operatorname{tg} \frac{31\pi}{6};
+\qquad
+\text{в) } \operatorname{tg} \frac{22\pi}{3};
+\qquad
+\text{г) } \operatorname{tg} \frac{47\pi}{4}.
+$$
+
+$$
+\text{д) } \operatorname{tg} \frac{55\pi}{6};
+\qquad
+\text{е) } \operatorname{tg} \frac{37\pi}{3};
+\qquad
+\text{ж) } \operatorname{tg} \frac{63\pi}{4};
+\qquad
+\text{з) } \operatorname{tg} \frac{89\pi}{6}.
+$$
+
+$$
+\text{и) } \operatorname{tg} 450^\circ;
+\qquad
+\text{к) } \operatorname{tg} (-600^\circ);
+\qquad
+\text{л) } \operatorname{tg} 855^\circ;
+\qquad
+\text{м) } \operatorname{tg} (-765^\circ).
+$$
+</Ex>
+
+<Ex>
+**Задание 6 (котангенс):** Используя свойство периодичности функции \( y = \operatorname{ctg} x \), найдите:
+
+$$
+\text{а) } \operatorname{ctg} \frac{9\pi}{4};
+\qquad
+\text{б) } \operatorname{ctg} \frac{47\pi}{2};
+\qquad
+\text{в) } \operatorname{ctg} \frac{35\pi}{6};
+\qquad
+\text{г) } \operatorname{ctg} \frac{29\pi}{3}.
+$$
+
+$$
+\text{д) } \operatorname{ctg} \frac{53\pi}{4};
+\qquad
+\text{е) } \operatorname{ctg} \frac{41\pi}{6};
+\qquad
+\text{ж) } \operatorname{ctg} \frac{67\pi}{3};
+\qquad
+\text{з) } \operatorname{ctg} \frac{77\pi}{4}.
+$$
+
+$$
+\text{и) } \operatorname{ctg} 510^\circ;
+\qquad
+\text{к) } \operatorname{ctg} (-585^\circ);
+\qquad
+\text{л) } \operatorname{ctg} 750^\circ;
+\qquad
+\text{м) } \operatorname{ctg} (-855^\circ).
+$$
+</Ex>
+
+<Ex>
+**Задание 7 (тангенс):** Используя свойство нечётности функции \( y = \operatorname{tg} x \), найдите:
+
+$$
+\text{а) } \operatorname{tg}\left(-\frac{\pi}{3}\right);
+\qquad
+\text{б) } \operatorname{tg}(-2\pi);
+\qquad
+\text{в) } \operatorname{tg}\left(-\frac{5\pi}{6}\right);
+\qquad
+\text{г) } \operatorname{tg}\left(-\frac{7\pi}{4}\right).
+$$
+
+$$
+\text{д) } \operatorname{tg}\left(-\frac{11\pi}{3}\right);
+\qquad
+\text{е) } \operatorname{tg}\left(-\frac{13\pi}{6}\right);
+\qquad
+\text{ж) } \operatorname{tg}\left(-\frac{19\pi}{4}\right);
+\qquad
+\text{з) } \operatorname{tg}(-5\pi).
+$$
+
+$$
+\text{и) } \operatorname{tg}(-405^\circ);
+\qquad
+\text{к) } \operatorname{tg}(-840^\circ);
+\qquad
+\text{л) } \operatorname{tg}(-1125^\circ);
+\qquad
+\text{м) } \operatorname{tg}(-1350^\circ).
+$$
+</Ex>
+
+<Ex>
+**Задание 8 (котангенс):** Используя свойство нечётности функции \( y = \operatorname{ctg} x \), найдите:
+
+$$
+\text{а) } \operatorname{ctg}\left(-\frac{\pi}{4}\right);
+\qquad
+\text{б) } \operatorname{ctg}\left(-\frac{11\pi}{2}\right);
+\qquad
+\text{в) } \operatorname{ctg}\left(-\frac{5\pi}{3}\right);
+\qquad
+\text{г) } \operatorname{ctg}\left(-\frac{7\pi}{6}\right).
+$$
+
+$$
+\text{д) } \operatorname{ctg}\left(-\frac{13\pi}{4}\right);
+\qquad
+\text{е) } \operatorname{ctg}\left(-\frac{17\pi}{6}\right);
+\qquad
+\text{ж) } \operatorname{ctg}\left(-\frac{23\pi}{3}\right);
+\qquad
+\text{з) } \operatorname{ctg}(-7\pi).
+$$
+
+$$
+\text{и) } \operatorname{ctg}(-495^\circ);
+\qquad
+\text{к) } \operatorname{ctg}(-630^\circ);
+\qquad
+\text{л) } \operatorname{ctg}(-945^\circ);
+\qquad
+\text{м) } \operatorname{ctg}(-1080^\circ).
+$$
+</Ex>
+
+<Ex>
+**Задание 9 (тангенс):** Постройте график функции, укажите период, асимптоты и множество значений.
+
+$$
+\text{а) } y = \operatorname{tg}\left(x - \frac{\pi}{3}\right);
+\qquad
+\text{б) } y = \operatorname{tg} x + 2;
+\qquad
+\text{в) } y = \operatorname{tg}\left(x + \frac{\pi}{4}\right) - 1;
+\qquad
+\text{г) } y = 2\operatorname{tg} x.
+$$
+
+$$
+\text{д) } y = \operatorname{tg}\left(x + \frac{\pi}{6}\right);
+\qquad
+\text{е) } y = \operatorname{tg} x - 3;
+\qquad
+\text{ж) } y = \frac{1}{2}\operatorname{tg}\left(x - \frac{\pi}{2}\right);
+\qquad
+\text{з) } y = -\operatorname{tg} x.
+$$
+
+$$
+\text{и) } y = \operatorname{tg} 2x;
+\qquad
+\text{к) } y = \operatorname{tg} \frac{x}{2} + 1.
+$$
+</Ex>
+
+<Ex>
+**Задание 10 (котангенс):** Постройте график функции, укажите период, асимптоты и множество значений.
+
+$$
+\text{а) } y = \operatorname{ctg} x + 1;
+\qquad
+\text{б) } y = \operatorname{ctg}\left(x + \frac{\pi}{2}\right);
+\qquad
+\text{в) } y = \operatorname{ctg}\left(x - \frac{\pi}{6}\right) - 2;
+\qquad
+\text{г) } y = 3\operatorname{ctg} x.
+$$
+
+$$
+\text{д) } y = \operatorname{ctg}\left(x - \frac{\pi}{4}\right);
+\qquad
+\text{е) } y = \operatorname{ctg} x - 4;
+\qquad
+\text{ж) } y = \frac{1}{3}\operatorname{ctg}\left(x + \frac{\pi}{3}\right);
+\qquad
+\text{з) } y = -\operatorname{ctg} x.
+$$
+
+$$
+\text{и) } y = \operatorname{ctg} 3x;
+\qquad
+\text{к) } y = \operatorname{ctg} \frac{x}{4} - 1.
+$$
+</Ex>
 </LessonSection>
 
-<LessonSection title="Функция y = tg α: основные свойства">
+<Section id="inverse-trig-functions" title="Обратные тригонометрические функции">
 
-**Формулировка:** Функция тангенса имеет особенности, связанные с её определением как отношения синуса к косинусу.
+<Def title="Функция y = arcsin x">
+  Функция арксинуса позволяет находить угол по значению синуса, выбирая главные значения в определённом интервале.
 
-**1. Область определения**
-$$ D(\tan) = ℝ \setminus \{\frac{\pi}{2} + πk \mid k ∈ ℤ\} $$
-Не определена там, где $\cos α = 0$.
+  **1. Область определения**
 
-**2. Область значений**
-$$ E(\tan) = ℝ $$
+  $$
+  D(\arcsin) = [-1; 1]
+  $$
 
-**3. Периодичность**
-$$ \tan(α + π) = \tan α \quad T = π $$
+  **2. Область значений**
 
-**4. Нечетность**
-$$ \tan(−α) = -\tan α $$
+  $$
+  E(\arcsin) = \left[-\frac{\pi}{2}; \frac{\pi}{2}\right]
+  $$
 
-**5. Нули функции**
-$$ \tan α = 0 \quad \Leftrightarrow \quad α = πk, \quad k ∈ ℤ $$
+  **3. Чётность и нечётность**
 
-**6. Монотонность**
-**Возрастает** на каждом интервале определения: $(-\frac{\pi}{2} + πk; \frac{\pi}{2} + πk)$
+  $$
+  \arcsin(-x) = -\arcsin x \quad \text{(нечётная функция)}
+  $$
 
-**7. Асимптоты**
-$$ α = \frac{\pi}{2} + πk $$
-Вертикальные асимптоты (там, где функция не определена).
+  **4. Нули функции**
 
-**8. График (тангенсоида)**
+  $$
+  \arcsin x = 0 \quad \Leftrightarrow \quad x = 0
+  $$
+</Def>
 
-![График тангенса](https://i.postimg.cc/t4BNFycm/изображение.png)
+<Def title="Функция y = arccos x">
+  Функция арккосинуса позволяет находить угол по значению косинуса, выбирая главные значения в определённом интервале.
 
-Период T = π, проходит через (0,0), имеет вертикальные асимптоты.
+  **1. Область определения**
 
-</LessonSection>
+  $$
+  D(\arccos) = [-1; 1]
+  $$
 
-<LessonSection title="Функция y = ctg α: основные свойства">
+  **2. Область значений**
 
-**Формулировка:** Функция котангенса, обратная к тангенсу, имеет особенности, связанные с её определением как отношения косинуса к синусу.
+  $$
+  E(\arccos) = [0; \pi]
+  $$
 
-**1. Область определения**
-$$ D(\cot) = ℝ \setminus \{πk \mid k ∈ ℤ\} $$
-Не определена там, где $\sin α = 0$ (точки $α = 0, ±π, ±2π, ...$).
+  **3. Чётность**
 
-**2. Область значений**
-$$ E(\cot) = ℝ $$
+  $$
+  \arccos(-x) = \pi - \arccos x
+  $$
 
-**3. Периодичность**
-$$ \cot(α + π) = \cot α \quad T = π $$
+  **4. Связь с арксинусом**
 
-**4. Нечетность**
-$$ \cot(−α) = -\cot α $$
+  $$
+  \arccos x = \frac{\pi}{2} - \arcsin x
+  $$
 
-**5. Нули функции**
-$$ \cot α = 0 \quad \Leftrightarrow \quad α = \frac{\pi}{2} + πk, \quad k ∈ ℤ $$
+  **5. Нули функции**
 
-**6. Монотонность**
-**Убывает** на каждом интервале определения: $(πk; π + πk)$
+  $$
+  \arccos x = 0 \quad \Leftrightarrow \quad x = 1
+  $$
+</Def>
 
-**7. Асимптоты**
-$$ α = πk, \quad k ∈ ℤ $$
-Вертикальные асимптоты (там, где функция не определена).
+<Def title="Функция y = arctg x">
+  Функция арктангенса позволяет находить угол по значению тангенса, выбирая главные значения в определённом интервале.
 
-**8. График (котангенсоида)**
+  **1. Область определения**
 
-![График котангенса](https://i.postimg.cc/MTQ0kBGK/изображение.png)
+  $$
+  D(\arctg) = \mathbb{R}
+  $$
 
-Период T = π, нули в точках $\frac{\pi}{2} + πk$, вертикальные асимптоты в точках $πk$.
+  **2. Область значений**
 
-</LessonSection>
+  $$
+  E(\arctg) = \left(-\frac{\pi}{2}; \frac{\pi}{2}\right)
+  $$
 
-<LessonSection title="Решение типовых заданий (свойства функций)">
+  **3. Чётность и нечётность**
 
-**Пример 1: Область определения и значения**
+  $$
+  \arctg(-x) = -\arctg x \quad \text{(нечётная функция)}
+  $$
 
-Найти область определения и множество значений функции:
-а) $f(x) = 2 \sin 5x$
-$$ D(f) = ℝ, \quad E(f) = [-2; 2] \quad \text{(так как } \sin 5x ∈ [-1; 1]\text{)} $$
+  **4. Нули функции**
 
-б) $f(x) = \sin 2x - 7$
-$$ D(f) = ℝ, \quad E(f) = [-8; -6] $$
+  $$
+  \arctg x = 0 \quad \Leftrightarrow \quad x = 0
+  $$
+</Def>
 
-**Пример 2: Использование четности**
+<Def title="Функция y = arcctg x">
+  Функция арккотангенса позволяет находить угол по значению котангенса, выбирая главные значения в определённом интервале.
 
-Вычислить с использованием свойств четности:
-а) $\sin(-\frac{5\pi}{2})$
-$$
-\sin(-\frac{5\pi}{2}) = -\sin(\frac{5\pi}{2}) = -\sin(2π + \frac{\pi}{2}) = -\sin(\frac{\pi}{2}) = -1
-$$
+  **1. Область определения**
 
-б) $\cos(-9π)$
-$$
-\cos(-9π) = \cos(9π) = \cos(8π + π) = \cos π = -1
-$$
+  $$
+  D(\arcctg) = \mathbb{R}
+  $$
 
-**Пример 3: Область определения**
+  **2. Область значений**
 
-Найти область определения:
-а) $y = \cot 3x$
-$\cot 3x$ не определен при $\sin 3x = 0$
-$$
-\sin 3x = 0 \Leftrightarrow 3x = πk \Rightarrow x = \frac{πk}{3}, \quad k ∈ ℤ
-$$
-$$ D(y) = ℝ \setminus \{\frac{πk}{3} \mid k ∈ ℤ\} $$
+  $$
+  E(\arcctg) = (0; \pi)
+  $$
 
-б) $y = \tan(\frac{x}{5})$
-$\tan(\frac{x}{5})$ не определен при $\cos(\frac{x}{5}) = 0$
-$$
-\cos(\frac{x}{5}) = 0 \Leftrightarrow \frac{x}{5} = \frac{\pi}{2} + πk \Rightarrow x = \frac{5π}{2} + 5πk
-$$
-$$ D(y) = ℝ \setminus \{\frac{5π}{2} + 5πk \mid k ∈ ℤ\} $$
+  **3. Чётность**
 
-</LessonSection>
+  $$
+  \arcctg(-x) = \pi - \arcctg x
+  $$
 
-<LessonSection title="Обратные тригонометрические функции">
+  **4. Связь с арктангенсом**
 
-**Формулировка:** Обратные тригонометрические функции позволяют находить угол по значению его тригонометрической функции, выбирая главные значения в определённых интервалах.
+  $$
+  \arcctg x = \frac{\pi}{2} - \arctg x
+  $$
 
-**1. arcsin x (арксинус)**
-$$ y = \arcsin x \quad \Leftrightarrow \quad \sin y = x, \quad y ∈ [-\frac{\pi}{2}; \frac{\pi}{2}] $$
-**D:** $[-1; 1]$, **E:** $[-\frac{\pi}{2}; \frac{\pi}{2}]$, нечётная функция: $\arcsin(-x) = -\arcsin x$
+  **5. Нули функции**
 
-**2. arccos x (арккосинус)**
-$$ y = \arccos x \quad \Leftrightarrow \quad \cos y = x, \quad y ∈ [0; π] $$
-**D:** $[-1; 1]$, **E:** $[0; π]$, $\arccos x = \frac{\pi}{2} - \arcsin x$, $\arccos(-x) = π - \arccos x$
+  $$
+  \arcctg x = \frac{\pi}{2} \quad \Leftrightarrow \quad x = 0
+  $$
+</Def>
 
-**3. arctg x (арктангенс)**
-$$ y = \arctan x \quad \Leftrightarrow \quad \tan y = x, \quad y ∈ (-\frac{\pi}{2}; \frac{\pi}{2}) $$
-**D:** $ℝ$, **E:** $(-\frac{\pi}{2}; \frac{\pi}{2})$, нечётная функция: $\arctan(-x) = -\arctan x$
+<Ex title="Пример 1. Проверка существования">
+  **а) $\arcsin 2$**
 
-**4. arcctg x (арккотангенс)**
-$$ y = \operatorname{arccot} x \quad \Leftrightarrow \quad \cot y = x, \quad y ∈ (0; π) $$
-**D:** $ℝ$, **E:** $(0; π)$, $\operatorname{arccot}(-x) = π - \operatorname{arccot} x$
+  Не существует, так как $2 \notin [-1; 1]$
 
-</LessonSection>
+  **б) $\arccos(-1.5)$**
 
-<LessonSection title="Вычисление обратных тригонометрических функций">
+  Не существует, так как $-1.5 \notin [-1; 1]$
 
-**Пример 1: Проверка существования**
-а) $\arcsin 2$ → Не существует, так как $2 ∉ [-1; 1]$
-б) $\arccos(-1.5)$ → Не существует, так как $-1.5 ∉ [-1; 1]$
-в) $\arctan(1000)$ → Существует, так как $D(\arctan) = ℝ$
+  **в) $\arctg(1000)$**
 
-**Пример 2: Основные положительные значения**
-а) $\arcsin(\frac{1}{2}) = \frac{\pi}{6}$ так как $\sin(\frac{\pi}{6}) = \frac{1}{2}$
-б) $\arccos(\frac{\sqrt{2}}{2}) = \frac{\pi}{4}$ так как $\cos(\frac{\pi}{4}) = \frac{\sqrt{2}}{2}$
+  Существует, так как $D(\arctg) = \mathbb{R}$
+</Ex>
 
-**Пример 3: Отрицательные значения**
-а) $\arcsin(-\frac{1}{2}) = -\arcsin(\frac{1}{2}) = -\frac{\pi}{6}$
-б) $\arccos(-\frac{1}{2}) = π - \arccos(\frac{1}{2}) = π - \frac{\pi}{3} = \frac{2π}{3}$
-в) $\arctan(-1) = -\arctan(1) = -\frac{\pi}{4}$
-г) $\operatorname{arccot}(-\sqrt{3}) = π - \operatorname{arccot}(\sqrt{3}) = π - \frac{\pi}{6} = \frac{5π}{6}$
+<Ex title="Пример 2. Основные положительные значения">
+  **а) $\arcsin\left(\dfrac{1}{2}\right)$**
 
-**Пример 4: Граничные значения**
-а) $\arcsin 1 = \frac{\pi}{2}$ так как $\sin(\frac{\pi}{2}) = 1$
-б) $\arcsin(-1) = -\frac{\pi}{2}$
-в) $\arccos 1 = 0$
-г) $\arccos(-1) = π$
+  $$
+  \arcsin\frac{1}{2} = \frac{\pi}{6}, \quad \text{так как } \sin\frac{\pi}{6} = \frac{1}{2}
+  $$
 
-**Пример 5: Соотношения между функциями**
-а) $\arcsin x + \arccos x = \frac{\pi}{2}$ для всех $x ∈ [-1; 1]$
-б) $\arctan x + \operatorname{arccot} x = \frac{\pi}{2}$ для всех $x ∈ ℝ$
+  **б) $\arccos\left(\dfrac{\sqrt{2}}{2}\right)$**
 
-</LessonSection>
+  $$
+  \arccos\frac{\sqrt{2}}{2} = \frac{\pi}{4}, \quad \text{так как } \cos\frac{\pi}{4} = \frac{\sqrt{2}}{2}
+  $$
+</Ex>
+
+<Ex title="Пример 3. Отрицательные значения">
+  **а) $\arcsin\left(-\dfrac{1}{2}\right)$**
+
+  $$
+  \arcsin\left(-\frac{1}{2}\right) = -\arcsin\frac{1}{2} = -\frac{\pi}{6}
+  $$
+
+  **б) $\arccos\left(-\dfrac{1}{2}\right)$**
+
+  $$
+  \arccos\left(-\frac{1}{2}\right) = \pi - \arccos\frac{1}{2} = \pi - \frac{\pi}{3} = \frac{2\pi}{3}
+  $$
+
+  **в) $\arctg(-1)$**
+
+  $$
+  \arctg(-1) = -\arctg 1 = -\frac{\pi}{4}
+  $$
+
+  **г) $\arcctg(-\sqrt{3})$**
+
+  $$
+  \arcctg(-\sqrt{3}) = \pi - \arcctg(\sqrt{3}) = \pi - \frac{\pi}{6} = \frac{5\pi}{6}
+  $$
+</Ex>
+
+<Ex title="Пример 4. Граничные значения">
+  **а) $\arcsin 1$**
+
+  $$
+  \arcsin 1 = \frac{\pi}{2}, \quad \text{так как } \sin\frac{\pi}{2} = 1
+  $$
+
+  **б) $\arcsin(-1)$**
+
+  $$
+  \arcsin(-1) = -\frac{\pi}{2}
+  $$
+
+  **в) $\arccos 1$**
+
+  $$
+  \arccos 1 = 0
+  $$
+
+  **г) $\arccos(-1)$**
+
+  $$
+  \arccos(-1) = \pi
+  $$
+</Ex>
+
+<Ex title="Пример 5. Соотношения между функциями">
+  **а) $\arcsin x + \arccos x$**
+
+  $$
+  \arcsin x + \arccos x = \frac{\pi}{2}, \quad x \in [-1; 1]
+  $$
+
+  **б) $\arctg x + \arcctg x$**
+
+  $$
+  \arctg x + \arcctg x = \frac{\pi}{2}, \quad x \in \mathbb{R}
+  $$
+</Ex>
+
+</Section>
 
 <LessonSection title="Частные случаи тригонометрических уравнений">
 

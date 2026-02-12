@@ -21,7 +21,7 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
         style={{
           aspectRatio: `${finalWidth}/${finalHeight}`,
           maxWidth: '100%',
-          maxHeight: '20rem',
+          maxHeight: '30rem',
         }}
       >
         <Image
@@ -29,7 +29,7 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
           alt={alt}
           fill
           sizes="(max-width: 896px) 100vw, 896px"
-          className="rounded-lg shadow-md object-contain"
+          className="rounded-lg shadow-md object-contain max-h-[40rem] md:max-h-[20rem]"
         />
       </span>
     </span>
