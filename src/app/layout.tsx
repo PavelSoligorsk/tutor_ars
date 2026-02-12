@@ -1,7 +1,5 @@
 import './globals.css';
 
-import { Suspense } from 'react';
-
 import { Footer, Header } from '@/widgets';
 
 import type { Metadata } from 'next';
@@ -23,9 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className="flex min-h-screen flex-col bg-background font-sans antialiased">
-        <Suspense fallback={null}>
-          <Header />
-        </Suspense>
+        <Header />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
