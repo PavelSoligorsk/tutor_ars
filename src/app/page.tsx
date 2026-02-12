@@ -24,7 +24,7 @@ export default async function HomePage() {
         <h1 className="mb-4 text-4xl font-bold text-heading md:text-5xl">
           📐 Математика | Репетитор
         </h1>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">
+        <p className="mx-auto max-w-2xl text-lg text-muted">
           Добро пожаловать на обучающий сайт по математике! Выберите тему, чтобы начать изучение
           материала.
         </p>
@@ -37,7 +37,7 @@ export default async function HomePage() {
         {CATEGORIES.map((category) => (
           <div key={category} className="mb-8">
             <h3 className="mb-4 text-xl font-semibold text-heading">{CATEGORY_LABELS[category]}</h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-stagger">
               {GRADES.filter((grade) => grade.category === category).map((grade) => {
                 const lessons = getLessonsByGrade(grade.id);
                 return (
@@ -58,7 +58,7 @@ export default async function HomePage() {
       {!isAuthenticated && (
         <section className="mt-12 rounded-lg bg-primary/10 p-6 text-center">
           <h2 className="mb-2 text-xl font-bold text-heading">🔐 Требуется авторизация</h2>
-          <p className="text-gray-600">
+          <p className="text-muted">
             Для доступа к урокам необходимо войти в систему. Введите пароль на странице входа.
           </p>
         </section>

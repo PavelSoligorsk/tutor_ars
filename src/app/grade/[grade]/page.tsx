@@ -51,14 +51,14 @@ export default async function GradePage({ params }: GradePageProps) {
         <Link href="/" className="text-primary hover:underline">
           Главная
         </Link>
-        <span className="mx-2 text-gray-400">/</span>
-        <span className="text-gray-600">{grade.name}</span>
+        <span className="mx-2 text-muted">/</span>
+        <span className="text-muted">{grade.name}</span>
       </nav>
 
       {/* Header */}
-      <header className="mb-8">
+      <header className="animate-fade-in mb-8">
         <h1 className="mb-2 text-3xl font-bold text-heading">{grade.name}</h1>
-        <p className="text-gray-600">
+        <p className="text-muted">
           {lessons.length} {pluralize(lessons.length, 'тема', 'темы', 'тем')} доступно
         </p>
       </header>
@@ -67,8 +67,8 @@ export default async function GradePage({ params }: GradePageProps) {
       {lessons.length > 0 ? (
         <LessonList grade={grade} lessons={lessons} />
       ) : (
-        <div className="rounded-lg bg-yellow-50 p-6 text-center">
-          <p className="text-yellow-800">Уроки для этого класса пока не добавлены</p>
+        <div className="rounded-lg bg-warning-light p-6 text-center">
+          <p className="text-warning">Уроки для этого класса пока не добавлены</p>
         </div>
       )}
     </div>
