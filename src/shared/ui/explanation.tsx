@@ -9,7 +9,7 @@ interface ExplanationProps {
 
 export function Explanation({ children, className }: ExplanationProps) {
   return (
-    <div className={cn('my-4 rounded-lg bg-explanation p-4 text-foreground', className)}>
+    <div className={cn('my-4 rounded-lg bg-explanation overflow-x-auto p-4 text-foreground', className)}>
       {children}
     </div>
   );

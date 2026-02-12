@@ -10,7 +10,7 @@ interface DefinitionProps {
 
 export function Definition({ title = 'Определение', children, className }: DefinitionProps) {
   return (
-    <div className={cn('my-5 rounded-lg bg-definition p-5', className)}>
+    <div className={cn('my-5 rounded-lg overflow-x-auto bg-definition p-5', className)}>
       <div className="mb-2 text-lg font-bold text-primary-dark">{title}</div>
       <div className="text-foreground">{children}</div>
     </div>

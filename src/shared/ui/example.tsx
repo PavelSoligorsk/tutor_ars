@@ -18,7 +18,7 @@ export function Example({ title, children, isHard, variant, className }: Example
   return (
     <div
       className={cn(
-        'my-5 rounded-lg border-l-4 p-5',
+        'my-5 rounded-lg border-l-4 overflow-x-auto p-5',
         hard ? 'border-example-hard bg-danger-light' : 'border-example-success bg-example',
         className
       )}

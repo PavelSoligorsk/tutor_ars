@@ -11,7 +11,7 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        'block rounded-xl bg-white p-6 shadow-md transition-all duration-200',
+        'block rounded-xl bg-white overflow-x-auto p-6 shadow-md transition-all duration-200',
         className
       )}
     >
