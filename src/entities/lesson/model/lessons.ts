@@ -179,7 +179,7 @@ export const LESSONS: Lesson[] = [
   {
     id: '11-8',
     title: 'Логарифмические уравнения',
-    slug: 'log-uravneniya',
+    slug: 'log_uravn',
     gradeId: '11',
     order: 8,
   },
