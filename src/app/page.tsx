@@ -23,7 +23,7 @@ export default async function HomePage() {
       {/* Hero Section */}
       <section className="mb-12 text-center">
         <h1 className="mb-4 text-4xl font-bold text-heading md:text-5xl">
-          📐 Математика | Репетитор
+          Математика 
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-muted">
           Добро пожаловать на обучающий сайт по математике! Выберите тему, чтобы начать изучение

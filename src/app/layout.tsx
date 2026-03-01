@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Математика | Репетитор',
+    default: 'Математика',
     template: '%s | Математика',
   },
   description: 'Обучающий сайт по математике для учеников 5-11 классов',
