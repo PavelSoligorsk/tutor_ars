@@ -96,7 +96,7 @@ export default async function LessonPage({ params }: LessonPageProps) {
       </header>
 
       {/* Content */}
-      <article className="animate-fade-in-up rounded-xl bg-white p-6 shadow-md md:p-8">
+      <article className="animate-fade-in-up rounded-xl bg-white p-6 shadow-md md:p-8 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white dark:text-white">
         {mdxLesson ? (
           <MDXContent source={mdxLesson.content} />
         ) : (

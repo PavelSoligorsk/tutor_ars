@@ -16,7 +16,7 @@ export function LessonSection({ id, title, children, className }: LessonSectionP
     <section
       id={finalId}
       className={cn(
-        'mb-8 rounded-lg border-l-4 border-primary  bg-section p-6 shadow-sm',
+        'mb-8 rounded-lg border-l-4 border-primary  bg-section p-6 shadow-sm dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white',
         className
       )}
     >

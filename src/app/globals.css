@@ -1,5 +1,42 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Все текстовые элементы в темной теме */
+.dark body,
+.dark p,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark span,
+.dark div,
+.dark a:not(.btn),
+.dark li,
+.dark label,
+.dark strong,        /* для жирного текста */
+.dark b,             /* для жирного текста */
+.dark .font-bold,    /* для классов с жирностью */
+.dark .font-semibold,/* для классов с полужирным */
+.dark .font-medium,  /* для классов со средней жирностью */
+.dark .font-black,   /* для самого жирного */
+.dark .font-extrabold { /* для экстра жирного */
+  color: white !important;
+}
+
+/* Исключения для кнопок и элементов, где нужен другой цвет */
+.dark button:not(.keep-color),
+.dark .btn {
+  color: inherit; /* сохраняем оригинальный цвет кнопок */
+}
+
+
 :root {
   /* Base palette */
   --background: #f8f9fc;
@@ -183,3 +220,4 @@ math[display='block'] {
     radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
   background-size: 32px 32px;
 }
+

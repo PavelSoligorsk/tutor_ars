@@ -10,12 +10,12 @@ interface LessonListProps {
 
 export function LessonList({ grade, lessons }: LessonListProps) {
   return (
-    <div className="space-y-3 animate-stagger">
+    <div className="space-y-3 animate-stagger ">
       {lessons.map((lesson) => (
         <Link
           key={lesson.id}
           href={`/grade/${grade.slug}/${lesson.slug}`}
-          className="flex items-center gap-4 rounded-lg border border-border bg-white p-4 transition-all hover:border-primary hover:shadow-md"
+          className="flex items-center gap-4 rounded-lg border border-border bg-white p-4 transition-all hover:border-primary hover:shadow-md dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
             {lesson.order}

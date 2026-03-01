@@ -15,7 +15,7 @@ export function ImageContainer({ src, alt, width, height, className }: ImageCont
   const finalHeight = height ?? 400;
 
   return (
-    <span className={cn('my-5 flex w-full justify-center px-4 md:px-0', className)}>
+    <span className={cn('my-5 flex w-full justify-center px-4 md:px-0 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white', className)}>
       <span
         className="relative w-full"
         style={{

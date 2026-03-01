@@ -27,14 +27,14 @@ export function MathFormula({ children, display = false, className }: MathFormul
 
     return (
       <span
-        className={cn(display ? 'my-4 block text-center text-lg' : 'inline', className)}
+        className={cn(display ? 'my-4 block text-center text-lg dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white' : 'inline', className)}
         dangerouslySetInnerHTML={{ __html: html }}
       />
     );
   } catch (error) {
     console.error('KaTeX rendering error:', error);
     return (
-      <span className={cn(display ? 'my-4 block text-center text-lg' : 'inline', className)}>
+      <span className={cn(display ? 'my-4 block text-center text-lg dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white' : 'inline', className)}>
         {formula}
       </span>
     );

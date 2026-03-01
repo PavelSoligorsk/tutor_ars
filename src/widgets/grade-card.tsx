@@ -14,8 +14,8 @@ interface GradeCardProps {
 export function GradeCard({ grade, lessonsCount, isLocked = false }: GradeCardProps) {
   const content = (
     <>
-      <div className="mb-2 flex items-center justify-between">
-        <h3 className="text-lg font-bold text-heading">{grade.name}</h3>
+      <div className="mb-2 flex items-center justify-between dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">
+        <h3 className="text-lg font-bold text-heading ">{grade.name}</h3>
         {isLocked && <span className="text-xl">🔒</span>}
       </div>
       <p className="text-sm text-muted">
@@ -26,7 +26,7 @@ export function GradeCard({ grade, lessonsCount, isLocked = false }: GradeCardPr
 
   if (isLocked) {
     return (
-      <Card className="cursor-not-allowed opacity-60">
+      <Card className="cursor-not-allowed opacity-60 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">
         {content}
         <p className="mt-2 text-xs text-muted">Войдите для доступа</p>
       </Card>
@@ -35,7 +35,7 @@ export function GradeCard({ grade, lessonsCount, isLocked = false }: GradeCardPr
 
   return (
     <Link href={`/grade/${grade.slug}`} className="block">
-      <Card className="hover:-translate-y-1 hover:shadow-lg">{content}</Card>
+      <Card className="hover:-translate-y-1 hover:shadow-lg dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">{content}</Card>
     </Link>
   );
 }

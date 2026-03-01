@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-border bg-section py-6">
+    <footer className="mt-auto border-t border-border bg-section py-6 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">
       <div className="mx-auto max-w-6xl px-4 text-center text-sm text-muted">
         <p>© {new Date().getFullYear()} Математика | Репетитор</p>
         <p className="mt-2">Обучающий сайт по математике для учеников 5-11 классов</p>

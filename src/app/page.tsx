@@ -19,7 +19,7 @@ export default async function HomePage() {
   const isAuthenticated = !!session?.user;
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
+    <div className="mx-auto max-w-6xl px-4 py-8 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">
       {/* Hero Section */}
       <section className="mb-12 text-center">
         <h1 className="mb-4 text-4xl font-bold text-heading md:text-5xl">
@@ -36,9 +36,9 @@ export default async function HomePage() {
         <h2 className="mb-6 text-2xl font-bold text-heading">Выберите модуль</h2>
 
         {CATEGORIES.map((category) => (
-          <div key={category} className="mb-8">
+          <div key={category} className="mb-8 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">
             <h3 className="mb-4 text-xl font-semibold text-heading">{CATEGORY_LABELS[category]}</h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-stagger">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-stagger ">
               {GRADES.filter((grade) => grade.category === category && !grade.hidden).map((grade) => {
                 const lessons = getLessonsByGrade(grade.id);
                 return (

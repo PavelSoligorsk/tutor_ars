@@ -48,7 +48,7 @@ export default async function GradePage({ params }: GradePageProps) {
   const lessons = getLessonsByGrade(grade.id);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8">
+    <div className="mx-auto max-w-4xl px-4 py-8 dark:bg-gray-900 dark:shadow-gray-800/30 dark:text-white">
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm">
         <Link href="/" className="text-primary hover:underline">
