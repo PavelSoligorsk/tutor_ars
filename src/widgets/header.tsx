@@ -20,9 +20,6 @@ export async function Header() {
           
           {session?.user ? (
             <>
-              <span className="text-sm text-muted dark:text-gray-400">
-                ...
-              </span>
               <SignOutButton />
             </>
           ) : (
