@@ -12,7 +12,7 @@ export async function Header() {
           href="/" 
           className="text-xl font-bold text-primary hover:text-primary-dark dark:text-primary-light dark:hover:text-primary"
         >
-          Математика 🔞
+          Математика 
         </Link>
 
         <nav className="flex items-center gap-4">
@@ -21,7 +21,7 @@ export async function Header() {
           {session?.user ? (
             <>
               <span className="text-sm text-muted dark:text-gray-400">
-                Привет, нажми сюда если задолбала матеша ➡️
+                ...
               </span>
               <SignOutButton />
             </>
