@@ -191,6 +191,13 @@ export const LESSONS: Lesson[] = [
     gradeId: '11',
     order: 9,
   },
+  {
+    id: '11-10',
+    title: 'Текстовые задачи',
+    slug: 'text',
+    gradeId: '11',
+    order: 10,
+  },
 
   // Геометрия 7
 
