@@ -274,6 +274,22 @@ export const LESSONS: Lesson[] = [
     order: 2,
   },
 
+  {
+    id: '13-3',
+    title: 'Многоугольники. Правильные многоугольники',
+    slug: 'geom_practice3',
+    gradeId: '13',
+    order: 3,
+  },
+
+  {
+    id: '13-4',
+    title: 'Параллелограмм, ромб, квадрат, прямоугольник, трапеция',
+    slug: 'geom_practice4',
+    gradeId: '13',
+    order: 4,
+  },
+
   //РЦЭ
   {
     id: '19-1',
