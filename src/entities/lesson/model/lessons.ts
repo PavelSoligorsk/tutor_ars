@@ -268,7 +268,7 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '13-2',
-    title: 'Треугольник. Практика 1',
+    title: 'Треугольник',
     slug: 'geom_pract2',
     gradeId: '13',
     order: 2,
