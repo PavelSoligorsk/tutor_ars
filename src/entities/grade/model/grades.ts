@@ -33,6 +33,7 @@ export const GRADES: Grade[] = [
   { id: '19', name: 'РЦЭ', slug: 'rce', order: 14, category: 'exam' },
   { id: '20', name: 'ДРТ', slug: 'drt', order: 15, category: 'exam' },
   { id: '21', name: 'РТ', slug: 'rt', order: 16, category: 'exam' },
+  { id: '22', name: 'Комплексное тестирование', slug: 'crt', order: 17, category: 'exam' },
 ];
 
 export function getGradeBySlug(slug: string): Grade | undefined {

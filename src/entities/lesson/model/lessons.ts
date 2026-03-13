@@ -324,6 +324,14 @@ export const LESSONS: Lesson[] = [
     gradeId: '21',
     order: 2,
   },
+
+  {
+    id: '22-1',
+    title: 'Комплексный тест 1',
+    slug: 'crt-1',
+    gradeId: '22',
+    order: 1,
+  },
 ];
 
 export function getLessonsByGrade(gradeId: string): Lesson[] {
