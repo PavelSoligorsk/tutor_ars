@@ -290,6 +290,14 @@ export const LESSONS: Lesson[] = [
     order: 4,
   },
 
+  {
+    id: '13-5',
+    title: 'Окружность. Круг',
+    slug: 'geom_practice5',
+    gradeId: '13',
+    order: 5,
+  },
+
   //РЦЭ
   {
     id: '19-1',
