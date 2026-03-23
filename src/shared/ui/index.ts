@@ -8,3 +8,7 @@ export { Card } from './card';
 export { ImageContainer } from './image-container';
 export { Button } from './button';
 export { Input } from './input';
+export { CheckTask } from './checktask'; // Добавьте эту строку
+export { TaskProgress } from './task-progress'; // Добавьте эту строку
+export { TestStats } from './teststats'; // Добавьте эту строку
+

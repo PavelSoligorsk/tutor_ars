@@ -12,6 +12,9 @@ import {
   ImageContainer,
   LessonSection,
   MathFormula,
+  CheckTask, 
+  TaskProgress,
+  TestStats
 } from '@/shared/ui';
 
 import { remarkImageLinks } from './remark-image-links';
@@ -51,6 +54,10 @@ const components = {
   Def: Definition,
   Ex: Example,
   Img: ImageContainer,
+  CheckTask, // Добавляем компонент задания
+  Task: CheckTask, 
+  TaskManager: TaskProgress,
+  TestStats,
   // Markdown/HTML изображения: ![alt](src) и <img src="..." />
   img: ({ src, alt, width, height, className }: MdxImgProps) => {
     if (!src) {
