@@ -298,6 +298,15 @@ export const LESSONS: Lesson[] = [
     order: 5,
   },
 
+  {
+    id: '18-1',
+    title: 'ЦЭ 2023',
+    slug: 'ce-2023',
+    gradeId: '18',
+    order: 1,
+  },
+
+
   //РЦЭ
   {
     id: '19-1',
