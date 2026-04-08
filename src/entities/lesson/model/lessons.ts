@@ -300,8 +300,8 @@ export const LESSONS: Lesson[] = [
 
   {
     id: '13-6',
-    title: 'Основные понятия стереометрии',
-    slug: 'geom_practice6',
+    title: 'Основные понятия стереометрии. Пространственные фигуры: Призма, Пирамида,',
+    slug: 'geometry_practice6',
     gradeId: '13',
     order: 6,
   },
